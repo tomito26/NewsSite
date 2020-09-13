@@ -11,10 +11,10 @@ def index():
     # Getting sources
     politics = get_news('politics')
     print(politics)
-    business = get_news('business')
-    sports = get_news('sports')
-    entertainment = get_news(entertainment)
+    business_news = get_news('business')
+    sports_news = get_news('sports')
+    entertainment_news = get_news('entertainment')
     
     
     title = 'Home - Welcome to News  Updates site to get the latest news'
-    return render_template('index.html', title = title,politics = politics,sports = sports,business = business, entertainment = entertainment)
+    return render_template('index.html', title = title,politics = politics,sports = sports_news,business = business_news, entertainment = entertainment_news)
