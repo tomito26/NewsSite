@@ -1,28 +1,21 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
 
-<!-- Content block -->
 {% block content %}
-<!-- politics news articles -->
-<h3>Politics News</h3>
-<ul>
-    {{macro.displayNewsList(politics)}}
-</ul>
-
-<!-- business news articles -->
-<h3>Business News</h3>
-<ul>
-    {{macro.displayNewsList(business)}}
-</ul>
-<!-- sports news article -->
-<h3>Sport News</h3>
-<ul>
-    {{macro.displayNewsList(sports)}}
-</ul>
-<!-- Entertainment news article -->
-<h3>Entertainment News</h3>
-<ul>
-    {{macro.displayNewsList(entertainment)}}
-</ul>
+<div class="container">
+    <h1>News sources</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{macro.displayNewsList(en)}}</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
+

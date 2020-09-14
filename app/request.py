@@ -11,11 +11,11 @@ apiKey =app.config['NEWS_API_KEY']
 # Getting base url 
 base_url = app.config['NEWS_API_BASE_URL']
 
-def get_news(searchitem):
+def get_news(lang):
     '''
     Function that gets the json response to our url request
     '''
-    get_news_url = base_url.format(searchitem,apiKey)
+    get_news_url = base_url.format(lang,apiKey)
     # print(get_news_url)
     
     with urllib.request.urlopen(get_news_url) as url:
@@ -25,8 +25,8 @@ def get_news(searchitem):
         
         news_sources = None
         
-        if get_news_response['articles']:
-            news_sources_list = get_news_response['articles']
+        if get_news_response['sources']:
+            news_sources_list = get_news_response['sources']
             news_sources = process_sources(news_sources_list)
         # print(news_sources_list)
         # import pdb; pdb.set_trace()
@@ -50,16 +50,14 @@ def process_sources(news_list):
     news_sources = []
     
     for news_item in news_list:
-        author = news_item.get('author')
-        headline = news_item.get('title')
+        id = news_item.get('id')
+        name = news_item.get('name')
         description = news_item.get('description')
-        urltoimage = news_item.get('urlToImage')
-        publishAt  =  news_item.get('publishedAt')
-        content = news_item.get('content')
+    
         
         
-        if urltoimage:
-            news_object = News(author,headline,description,urltoimage,publishAt,content)
+        if id:
+            news_object = News(id,name,description)
             news_sources.append(news_object)
             
         
