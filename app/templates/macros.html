@@ -4,7 +4,7 @@
             {% for news in news_list %}
         
             
-                <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="col-sm-6 col-md-3 col-lg-3 p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{news.name}}</h5>
@@ -22,17 +22,19 @@
 {% macro displayArticlesList(article_list) %}
 
         {% for art  in article_list%}
+        
             <div class="col-md-3">
-                <div class="card">
-                     <img class="image-responsive" src="{{art.urlToImage}}" alt="Card image cap" style='width:286px; height:180px;'>
+                <div class="card"></div>         
+                    <img class="img-responsive" src="{{art.urlToImage}}" alt="article images">          
                     <div class="card-body">
                         <h4 class="card-title">{{art.title}}</h4>
-                        <p class="card-text">{{art.description}}</p>
-                        <a href="{{art.url}}" class="btn btn-primary btn-md">Read more</button>
-            
+                        <p class="card-text">{{art.description|truncate(50)}}</p>
+                        <a href="{{art.url}}" class="btn btn-primary btn-md">Read more</a>
                     </div>
                 </div>
             </div>
+                    
+                
         {% endfor %}
 
 
