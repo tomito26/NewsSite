@@ -8,5 +8,5 @@ class Articles:
         self.description = description
         self.url  = url
         self.urlToImage= urlToImage
-        self.publishAt = publishedAt
+        self.publishedAt = publishedAt
         

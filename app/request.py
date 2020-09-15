@@ -2,6 +2,7 @@ from app import  app
 import urllib.request,json
 from .models import news
 from .models import articles
+import datetime
 
 
 News = news.News
@@ -105,8 +106,8 @@ def process_articles(article_list):
         url =article_item.get('url')
         urlToImage  = article_item.get('urlToImage')
         publishedAt = article_item.get('publishedAt')
-        print(urlToImage)
-        
+        # print(urlToImage)
+       
         if urlToImage:
             article_object = Articles(author,title,description,url,urlToImage,publishedAt)
             news_articles.append(article_object)

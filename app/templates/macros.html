@@ -7,8 +7,8 @@
                 <div class="col-sm-6 col-md-3 col-lg-3 p-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">{{news.name}}</h5>
-                            <p class="card-text ">{{news.description}}</p>
+                            <h5 class="card-title text-center" style="font-size: medium;">{{news.name}}</h5>
+                            <p class="card-text " style="font-size:small;">{{news.description}}</p>
                             <a href="/articles/{{news.id}}" class="btn btn-primary">Get the latest news</a>
                         </div>
                     </div>
@@ -23,8 +23,8 @@
 
         {% for art  in article_list%}
 
-            <div class="col mb-4">
-                <div class="card">  
+            <div class="col mb-4 pt-3 ">
+                <div class="card ">  
                     <div class="view overlay">   
                         <img class="img-responsive card-img-top" src="{{art.urlToImage}}" alt="article images">          
                         <a href="#">
@@ -33,13 +33,14 @@
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{art.title}}</h4>
-                        <p class="card-text">{{art.description|truncate(50)}}</p>
+                        <p class="card-text" style="font-size: small;">{{art.description|truncate(100)}}</p>
+                        <p>{{art.publishedAt}}</p>
                         <a href="{{art.url}}" class="btn btn-primary btn-md">Read more</a>
                     </div>
                 </div>
             </div>
                     
-                
+          
         {% endfor %}
 
 

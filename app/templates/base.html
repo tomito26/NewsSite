@@ -14,12 +14,15 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
         {% endblock %}
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="utf-8">
        {% if title %}
        <title>{{ title }}</title> 
        {% else %}
        <title>Welcome to News Update site to get the latest news</title>
         {% endif %}
+       
     </head>
     {% block navbar %}
         {% include 'navbar.html' %}
