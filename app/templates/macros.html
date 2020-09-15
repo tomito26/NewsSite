@@ -5,7 +5,7 @@
         
             
                 <div class="col-sm-6 col-md-3 col-lg-3 p-3">
-                    <div class="card">
+                    <div class="card" style="height: 22rem;" >
                         <div class="card-body">
                             <h5 class="card-title text-center" style="font-size: medium;">{{news.name}}</h5>
                             <p class="card-text " style="font-size:small;">{{news.description}}</p>
@@ -24,7 +24,7 @@
         {% for art  in article_list%}
 
             <div class="col mb-4 pt-3 ">
-                <div class="card ">  
+                <div class="card " style="height: 35rem">  
                     <div class="view overlay">   
                         <img class="img-responsive card-img-top" src="{{art.urlToImage}}" alt="article images">          
                         <a href="#">
