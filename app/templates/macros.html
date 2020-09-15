@@ -9,7 +9,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center">{{news.name}}</h5>
                             <p class="card-text ">{{news.description}}</p>
-                            <a href="/articles/{{news.id}}" class="btn btn-primary">Go somewhere</a>
+                            <a href="/articles/{{news.id}}" class="btn btn-primary">Get the latest news</a>
                         </div>
                     </div>
                 </div>
@@ -22,10 +22,15 @@
 {% macro displayArticlesList(article_list) %}
 
         {% for art  in article_list%}
-        
-            <div class="col-md-3">
-                <div class="card"></div>         
-                    <img class="img-responsive" src="{{art.urlToImage}}" alt="article images">          
+
+            <div class="col mb-4">
+                <div class="card">  
+                    <div class="view overlay">   
+                        <img class="img-responsive card-img-top" src="{{art.urlToImage}}" alt="article images">          
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
                     <div class="card-body">
                         <h4 class="card-title">{{art.title}}</h4>
                         <p class="card-text">{{art.description|truncate(50)}}</p>
