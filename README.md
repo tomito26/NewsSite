@@ -6,6 +6,12 @@ This is a website that provides the latest news updates from around the world
 
 ## Author 
 * Thomas Khaemba
+  
+## BDD(Behaviour Driven Development)
+Given : That the user has access to the App
+Then : The user can click on the buttons both on the home page and articles page
+Expected: The button on the home page will direct the user to  articles and the buttons on  articles will direct the user  to the  full artcle on the source  website
+
 
 ## Installations
 * python
