@@ -1,5 +1,5 @@
 # News Update
-This is a [website](https://newsapp26.herokuapp.com/) that provides the latest news updates from around the world 
+This is a [website](https://newsapp97.herokuapp.com/) that provides the latest news updates from around the world 
 
 ![News article](articles.png)
 ![source](news-sources.png)
