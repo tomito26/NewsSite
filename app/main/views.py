@@ -1,9 +1,9 @@
 from flask import render_template
-from app import app
-from .request import get_news,get_articles
+from . import main
+from ..request import get_news,get_articles
 
 #views
-@app.route('/articles/<id>')
+@main.route('/articles/<id>')
 def article(id):
     '''
     Views  article page function that returns the news details page and its data
@@ -13,7 +13,7 @@ def article(id):
     print(article)
     return render_template('articles.html',article = article)
 
-@app.route('/')
+@main.route('/')
 def index():
     
     language = get_news('en')

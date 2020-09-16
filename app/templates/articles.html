@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
-
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/articles.css.css')}}">
+{% endblock %}
 {% block content %}
 
-<div class="containers pt-5">
+<div class="containers pt-5 articles">
     <div class="row row-cols-1 row-cols-md-4 pt-5">
         
         {{ macro.displayArticlesList(article)}}
