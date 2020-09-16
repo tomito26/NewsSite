@@ -9,6 +9,7 @@ def article(id):
     Views  article page function that returns the news details page and its data
     '''
     article = get_articles(id)
+    # title = {article.id}
      
     print(article)
     return render_template('articles.html',article = article)
