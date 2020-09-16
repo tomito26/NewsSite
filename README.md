@@ -11,6 +11,7 @@ This is a website that provides the latest news updates from around the world
 * python
 * Flask
 * virtual environment
+* Flask-bootstrap
 ## Project Set Up
 This project can be accessed by  setting up the environment  for running this application by installing the above technologies which are essential and then clone the project  and follow the steps below
 
@@ -22,3 +23,32 @@ Then get into  the project directory  you just cloned
 ```
 $ cd <project directory/folder>
 ```
+To open the project on the Vscode or atom 
+```
+$ code ./atom .
+```
+
+And there you have the project to run it on the terminal write the following command
+
+```
+$ ./start.sh
+```
+## Technologies Used:
+* Python-flask
+* HTML
+* Bootstrap
+* CSS3
+* newsApi
+* 
+
+
+## Contribution
+You can contribute to the project by forking the project  and following the above steps of cloning the project
+
+
+
+## Support and Contacts
+For assistance,collaboration or query feel free to reachout
+
+## Copyright and Licence
+Licenced under [MIT](license)
