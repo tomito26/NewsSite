@@ -56,5 +56,5 @@ You can contribute to the project by forking the project  and following the abov
 ## Support and Contacts
 For assistance,collaboration or query feel free to reachout tommybwah@gmail.com
 
-## Copyright and Licence
-Licenced under [MIT](license)
+## Copyright and License
+Licensed under [MIT](license)
